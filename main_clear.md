@@ -1,3 +1,4 @@
+```
 let IPInfo = {}
 fetch("https://ip.useragentinfo.com/json")
   .then((res) => {
@@ -104,3 +105,5 @@ document.querySelector('.bindBtn').addEventListener('click', () => {
     }).finally(() => {
   })
 })
+
+```
