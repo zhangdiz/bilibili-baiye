@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <link rel="shortcut icon" href="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/images/favicon.ico"
+        type="image/x-icon">
+  <title>白夜极光预抽限定光灵、丰厚见面礼</title>
+  <link rel="stylesheet" type="text/css" href="https://s-tatic.oss-cn-shanghai.aliyuncs.com/byjg-index.css">
+  <link rel="stylesheet" type="text/css" href="https://s-tatic.oss-cn-shanghai.aliyuncs.com/byjg-main.css">
+  <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+  <style type="text/css">
+    body, html {
+      background-color: #FFFFFF;
+    }
+    #_overlay_{
+      display: none!important;
+    }
+
+    .popBox .box.active{
+      display: contents!important;
+    }
+    /*info*/
+    .info {
+      width: 97%;
+      background: rgba(255, 255, 255, 0.1);
+      font-size: 0.22rem;
+      line-height: 0.32rem;
+      padding: 0.08rem 0.1rem 0.1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    .info p {
+      padding: 0 0.15rem;
+      color: #000000;
+    }
+
+    .info .box {
+      display: flex;
+      justify-content: space-between;
+      color: #000000;
+      position: absolute;
+      right: 0.1rem;
+      bottom: 0.1rem;
+    }
+
+    .info .box a {
+      color: #000000;
+      position: relative;
+      display: inline-block;
+      margin-right: 0.15rem;
+    }
+
+    .name {
+      float: right;
+      margin-top: -0.35rem;
+    }
+
+    .info .box .yszc::after {
+      content: '|';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -0.14rem;
+    }
+    .modal-3{
+      position: absolute;
+      top: 10.92rem;
+      right: 2.4rem;
+      color: #fff;
+      font-size: 18px;
+      /*width: 20px;*/
+      /*height: 20px;*/
+      background: #b19052;
+    }
+  </style>
+  <script>
+    //屏幕适应
+    (function (win, doc) {
+      if (!win.addEventListener) return;
+      var html = document.documentElement;
+
+      function setFont() {
+        var html = document.documentElement;
+        var k = 750;
+        html.style.fontSize = html.clientWidth / k * 100 + "px";
+      }
+
+      setFont();
+      setTimeout(function () {
+        setFont();
+      }, 300);
+      doc.addEventListener('DOMContentLoaded', setFont, false);
+      win.addEventListener('resize', setFont, false);
+      win.addEventListener('load', setFont, false);
+    })(window, document);
+  </script>
+</head>
+<body>
+<body _c_t_j1="1">
+<div class="wrap">
+  <header class="head pr">
+    <!--已预约添加on类名-->
+<!--    <a id="reserve" href="javascript:reportEvent('官网-预约');" class="head_btn pa sp db">预约</a>-->
+<!--    <span class="modal-3">4</span>-->
+  </header>
+  <div class="content">
+    <div style="margin: auto;text-align: center;" class="">
+      <img style="width: 98vw;" src="https://article.biliimg.com/bfs/article/a07d0a77038bb90bca2dc943c01edf96c323374c.png@1e_1c.webp" alt="">
+
+    </div>
+    <!--模块一-->
+    <div class="part part1 pr">
+      <h2 class="sp db">神秘卡池赢五星知更</h2>
+      <p class="tis" style="line-height: 1.517">限定卡池来袭！活动期间，玩家可通过应用商店下载 <span style="color: #af8d02">【快手极速版】</span>APP，截图保存下方官方二维码。
+        <span style="color: #af8d02">观看三个视频三分钟即可获得3个光灵和丰厚的见面礼</span>
+        ，100%获得限定光灵<span style="color: #af8d02">&lt;知更&gt;</span>！~</p>
+      <div class="" style="text-align: center">
+        <img width="200" src="https://article.biliimg.com/bfs/article/a80c9cfabdc5c6d75b2fab68c395dd3101772911.png@1e_1c.webp" />
+      </div>
+      <p class="tis">扫一扫</p>
+      <img style="width: 100vw;" src="https://article.biliimg.com/bfs/article/295a6dd31b6d8ac6d73fdff865104de31a120347.png@1e_1c.webp" alt="">
+      <p class="num">剩余可抽卡次数：<span id="drawNum">0</span>次</p>
+      <div class="chouka" style="background: #000;margin-top: 0.6rem;font-size: 0.6rem; text-align: center;color: #e3c64a;    border: 2px solid;
+    border-radius: 10px; padding: 10px 55px;">点击获取丰厚见面礼与抽卡次数</div>
+      <div class="" style="font-size: 0.4rem;margin-top: 0.2rem;margin-bottom: 1rem; text-align: center;color: #af8d02">注意：需要观看三个视频三分钟</div>
+
+<div class="">
+  <img style="width: 100vw;" src="https://article.biliimg.com/bfs/article/97b3d813c0585a355fe648a171ae8aa7167a4c9f.png@1e_1c.webp" alt="">
+</div>
+
+      <h4 class="sp db ht1">点击卡牌 获取光灵</h4>
+      <ul class="card_list1">
+        <!--li标签添加on类名翻转-->
+        <li>
+          <div></div>
+          <img src="//game.gtimg.cn/images/baiye/cp/a20230508byyck/index/card_bg.png"></li>
+        <li>
+          <div></div>
+          <img src="//game.gtimg.cn/images/baiye/cp/a20230508byyck/index/card_bg.png"></li>
+        <li>
+          <div></div>
+          <img src="//game.gtimg.cn/images/baiye/cp/a20230508byyck/index/card_bg.png"></li>
+      </ul>
+      <h4 class="sp db ht2">5星光灵一览</h4>
+      <img class="wxcard" src="//game.gtimg.cn/images/baiye/cp/a20230508byyck/index/Card5x.png">
+    </div>
+    <div class="part part2">
+      <h2 class="sp db">我保留的光灵</h2>
+      <div class="imgs">
+        <img id="myCard" src="//game.gtimg.cn/images/baiye/cp/a20230508byyck/index/nCard.png" alt="">
+      </div>
+
+      <div class="btns pr">
+        <!--默认置灰，去掉on类名点亮-->
+        <a href="javascript:reportEvent('官网-领取礼包');" class="ljlq_btn on sp db"></a>
+        <p>游戏上线后，完成角色注册，即可领取</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="pop pr pop2" id="pop2">
+  <p class="p_tis"></p>
+  <div class="pop-box">
+    <input type="text" class="sp" name="" id="copy" value="">
+    <a href="javascript:copyUrl();reportEvent('官网-一键复制');" class="sp db btn_yjfz">一键复制</a>
+  </div>
+  <a class="pop-close db sp" href="javascript:closeDialog();" title="关闭">×</a>
+</div>
+
+<!--恭喜获得光灵一张!弹窗-->
+<div class="pop pr pop3" id="pop3">
+  <h2 class="sp db">恭喜获得光灵!</h2>
+  <div class="pop-box">
+    <img class="pop_img" src="" alt="">
+    <a href="javascript:closeDialog();OUT.init(0);reportEvent('官网-收下光灵');" class="sxkp_btn  db pa sp">收下光灵</a>
+  </div>
+  <a class="pop-close db sp" href="javascript:closeDialog();" title="关闭">×</a>
+</div>
+
+<!--助我一臂之力!五星限定就靠你了 弹窗-->
+<div class="pop pr pop4" id="pop4">
+  <h2 class="sp db">助我一臂之力!五星限定就靠你了</h2>
+  <div class="pop-box">
+    <img class="pop_img" src="//game.gtimg.cn/images/baiye/cp/a20230508byyck/index/pop10.png" alt="">
+    <a id="accept" href="javascript:reportEvent('官网-助力好友');" class="zlhy pa sp">预约游戏助力好友</a>
+  </div>
+  <a class="pop-close db sp" href="javascript:closeDialog();" title="关闭">×</a>
+</div>
+
+<!--确认选择保留【已拥有光灵】  弹窗-->
+<div class="pop pr pop5" id="pop5">
+  <div class="pop-box">
+    <p>确认选择保留【已拥有光灵】,</p>
+    <p>不做替换吗?</p>
+    <a href="javascript:closeDialog();OUT.init(0);reportEvent('官网-确认选择已保留');" class="qr_btn pa db sp">确认</a>
+  </div>
+  <a class="pop-close db sp" href="javascript:TGDialogS('pop7');" title="关闭">×</a>
+</div>
+
+<!--确认选择替换【新获得光灵】吗？ 弹窗-->
+<div class="pop pr pop6" id="pop6">
+  <div class="pop-box">
+    <p>确认选择替换【新获得光灵】吗？</p>
+    <a id="exchange" href="javascript:reportEvent('官网-确认替换新获得');" class="qr_btn pa db sp">确认</a>
+  </div>
+  <a class="pop-close db sp" href="javascript:TGDialogS('pop7');" title="关闭">×</a>
+</div>
+
+<!--替换光灵弹窗-->
+<div class="pop pr pop7" id="pop7">
+  <div class="jh_card">
+    <div class="left">
+      <h2 class="sp db">已拥有光灵!</h2>
+      <div class="pop-box">
+        <img class="pop_img" src="" alt="">
+        <a href="javascript:TGDialogS('pop5');" class="bl_btn db sp">保留光灵</a>
+      </div>
+    </div>
+    <div class="right">
+      <h2 class="sp db">新获得光灵!</h2>
+      <div class="pop-box">
+        <img class="pop_img" src="" alt="">
+        <a href="javascript:TGDialogS('pop6');" class="jh_btn db sp">交换光灵</a>
+      </div>
+    </div>
+  </div>
+  <a class="pop-close db sp" href="javascript:TGDialogS('pop10');" title="关闭">×</a>
+</div>
+
+<!--光灵一览 弹窗-->
+<div class="pop pr pop8" id="pop8">
+  <img src="//game.gtimg.cn/images/baiye/cp/a20230508byyck/index/allCard.png">
+  <a class="pop-close db sp" href="javascript:closeDialog();" title="关闭">×</a>
+</div>
+
+<!--绑定角色并领取弹窗-->
+<div class="pop pr pop9" id="pop9">
+  <h2 class="sp db">光灵领取</h2>
+  <div class="user_msg">
+    <span>服务器</span><select name="服务器" class="sp">
+    <option value="手Q">手Q</option>
+    <option value="微信">微信</option>
+  </select>
+  </div>
+  <div class="user_msg">
+    <span>平台</span><select name="平台" class="sp">
+    <option value="IOS">IOS</option>
+    <option value="安卓">安卓</option>
+  </select>
+  </div>
+  <div class="user_msg">
+    <span>区服</span><select name="区服" class="sp">
+    <option value=""></option>
+  </select>
+  </div>
+  <div class="user_msg">
+    <span>角色名</span><select name="角色名" class="sp">
+    <option value=""></option>
+  </select>
+  </div>
+  <a href="javascript:;" onclick="PTTSendClick('btn','qrlq_btn','确认领取')" class="qrlq_btn db sp">领取</a>
+  <p>游戏上线后，完成注册，即可领取</p>
+  <a class="pop-close db sp" onclick="PTTSendClick('btn','pop-close','关闭')" href="javascript:closeDialog();"
+     title="关闭">×</a>
+</div>
+
+<div class="popBox hide" style="background: rgba(0,0,0,.6);">
+  <div class="box subscribe">
+    <div class="main">
+      <div class="title">立即预约</div>
+      <h1>亲爱的导航员，请预约</h1>
+      <div class="icon">
+        <a href="javascript:ACT.event.loginQQ();" onclick="isMobile ? reportEvent('resm_qq') : reportEvent('respc_qq')"><img data-src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/images/login-qq.png" alt="" src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/images/login-qq.png"></a>
+        <a href="javascript:ACT.event.loginWX();" onclick="isMobile ? reportEvent('resm_wx') : reportEvent('respc_wx')"><img data-src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/images/login-wechat.png" alt="" src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/images/login-wechat.png"></a>
+        <a href="javascript:ACT.event.unLoginWritePhone();" onclick="isMobile ? reportEvent('resm_m1') : reportEvent('respc_m1')"><img data-src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/images/login-phone.png" alt="" src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/images/login-phone.png"></a>
+      </div>
+    </div>
+  </div>
+  <div class="box login">
+    <div class="main">
+      <div class="title">立即登录</div>
+      <h1>亲爱的导航员，请登录</h1>
+      <div class="icon">
+        <a href="javascript:ACT.event.loginQQ();" onclick="isMobile ? reportEvent('menm_qq') : reportEvent('menpc_qq')"><img data-src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/images/login-qq.png" alt="" src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/images/login-qq.png"></a>
+        <a href="javascript:ACT.event.loginWX();" onclick="isMobile ? reportEvent('menm_wx') : reportEvent('menpc_wx')"><img data-src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/images/login-wechat.png" alt="" src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/images/login-wechat.png"></a>
+        <!--				<a href="javascript:ACT.event.unLoginWritePhone();" onclick="isMobile ? reportEvent('resm_phone') : reportEvent('respc_phone')"><img data-src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/images/login-phone.png" alt=""></a>-->
+      </div>
+    </div>
+  </div>
+  <div class="box bind">
+    <div class="main" style="top: 1rem;">
+      <div class="left">
+        <div class="title">观看视频领取奖励</div>
+        <form id="bind">
+<!--          <div class="system">-->
+<!--            <input type="radio" name="system" value="Android" checked="" id="Android"><label for="Android">Android</label>-->
+<!--            <input type="radio" name="system" value="ios" id="ios"><label for="ios">ios</label>-->
+<!--          </div>-->
+          <div class="inputBox">
+            <input id="sMobile" type="text" name="tel" maxlength="11" placeholder="请输入手机号码">
+          </div>
+          <div class="inputBox">
+            <input class="sms-code" type="text" maxlength="6" name="verifyCode" placeholder="请输入短信验证码">
+            <div class="getCode" id="getCode"  style="">获取验证码</div>
+            <div class="getCode" id="getCodeShow" style="display: none;">0(s)</div>
+          </div>
+          <img data-src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/images/btn-bind.png" alt="" class="btn bindBtn"  src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/images/btn-bind.png">
+          <div class="tips" style="scale: 1.2;margin-top: 0.2rem;">
+            <p>1、成功绑定后该手机号将会用于接收白夜极光的活动、更新等消息通知 <br>
+              2、填写手机号并点击“获取验证码”按钮，您将会收到验证码短信<br/>
+            3、之后下载快手极速版，扫描官方二维码之后，观看三分钟视频即可领取奖励, 否则无法领取奖励
+            </p>
+          </div>
+        </form>
+      </div>
+      <div class="right" style="scale: 1.4">
+        <div class="title">导航员见面礼</div>
+        <div  class="gifts">
+          <div class="giftLists">
+            <div class="item item1">
+              <img src="//game.gtimg.cn/images/baiye/cp/a20230511recruitment/homeImages/gifts.png" alt="">
+              <h1>【定档加码】官网专属定制家具x3</h1>
+            </div>
+            <div class="item">
+              <img src="//game.gtimg.cn/images/baiye/cp/a20230511recruitment/homeImages/giftss.png" alt="">
+              <h1>官网专属定制头像x1</h1>
+            </div>
+            <div class="giftBottom">
+              <div class="item">
+                <img src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/homeImages/gift2.png" alt="">
+                <h1>白夜币x158888</h1>
+              </div>
+              <div class="item">
+                <img src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/homeImages/gift3.png" alt="">
+                <h1>心之石x300</h1>
+              </div>
+              <div class="item">
+                <img src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/homeImages/gift4.png" alt="">
+                <h1>匿名礼包x30</h1>
+              </div>
+            </div>
+          </div>
+
+          <p>奖励领取说明：<br>游戏上线后导航员可通过官网奖励兑换页面领取“导航员见面礼”</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="box success">
+    <div class="main">
+      <div class="title">您已预约成功</div>
+      <h1>去成为引导世界的光吧！</h1>
+      <img data-src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/images/btn-start.png" alt="" class="start" onclick="isMobile ? reportEvent('resm_share') : reportEvent('respc_share')" src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/images/btn-start.png">
+      <div class="unbindText">点此解除手机绑定</div>
+      <img data-src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/images/vice-Q.png" alt="" class="vice" src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/images/vice-Q.png">
+    </div>
+  </div>
+  <div class="box unbind">
+    <div class="main">
+      <div class="title">解绑手机</div>
+      <h1>亲爱的导航员，解绑后手机号将无法再接收到白夜极光的信息通知，请谨慎考虑！</h1>
+      <form id="unbind">
+        <div class="inputBox">
+          <input id="sMobile2" type="tel" name="tel" placeholder="请输入手机号码">
+        </div>
+        <div class="inputBox">
+          <input type="tel" name="verifyCode" placeholder="请输入短信验证码">
+          <div class="getCode" id="getCode2" onclick="ACT.event.getRelieveCode()">获取验证码</div>
+          <div class="getCode" id="getCodeShow2" style="display: none"></div>
+        </div>
+      </form>
+      <img data-src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/images/btn-unbind.png" alt="" class="unbindBtn" src="//game.gtimg.cn/images/baiye/cp/a20230310recruitment/images/btn-unbind.png">
+    </div>
+  </div>
+  <div class="close" style="position: absolute; left: 50%; top: 50%; margin-left: 133.59px; margin-top: -325.672px;"></div>
+</div>
+
+<!--确认放弃本次抽卡结果吗？ 弹窗-->
+<div class="pop pr pop10" id="pop10">
+  <div class="pop-box">
+    <p>确认放弃本次抽卡结果吗？</p>
+    <a href="javascript:closeDialog();OUT.init(0);reportEvent('官网-放弃光灵');" class="qr_btn pa db sp">确认</a>
+  </div>
+  <a class="pop-close db sp" href="javascript:TGDialogS('pop7');" title="关闭">×</a>
+</div>
+
+<!--通用提示 弹窗-->
+<div class="pop pr pop11" id="pop11" style="visibility: visible; position: fixed; z-index: 9999; left: 0; right: 0; top: 50%; margin: auto;">
+  <div class="pop-box">
+    <p>暂无抽奖机会，完成任务可获得三次必中五星光灵机会</p>
+    <a href="javascript:closeDialog11();" class="qr_btn pa db sp">确认</a>
+  </div>
+  <a class="pop-close db sp" href="javascript:closeDialog11();" title="关闭">×</a>
+</div>
+
+<!--分享弹窗-->
+<div class="popfx" id="popfx">
+  <img src="//game.gtimg.cn/images/baiye/cp/a20230508byyck/index/fx.png">
+</div>
+
+<!--<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.11.3.min.js"></script>-->
+<!--<script type="text/javascript" src="//ossweb-img.qq.com/images/js/mobile_bundle/milo.js"></script>-->
+<!--<script src="//game.gtimg.cn/images/js/2018foot/foot.js"></script>-->
+<!--<script src="//game.gtimg.cn/images/js/eas/eas.js"></script>-->
+
+<script type="text/javascript">
+  //弹窗
+  function TGDialogS(e) {
+    need("biz.dialog-min", function (Dialog) {
+      Dialog.show({
+        id: e,
+        bgcolor: '#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+        opacity: 80 //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+      });
+    });
+  }
+
+  function closeDialog() {
+    need("biz.dialog-min", function (Dialog) {
+      Dialog.hide();
+    });
+  }
+
+  // 复制
+  function copyUrl() {
+    var _flag = true;
+    var val = document.getElementById("copy").value;
+    var sel = document.getElementById("copy").select();
+    if (val) {
+      try {
+        _flag = document.execCommand("Copy");
+        if (_flag) {
+          alert('复制成功');
+        } else {
+          alert('复制失败，请手动复制');
+        }
+      } catch (e) {
+        alert('复制失败，请手动复制');
+      }
+    } else {
+      alert('复制失败');
+    }
+  }
+
+
+
+</script>
+
+<div id="_overlay_"
+     style="background-color: rgb(0, 0, 0); border-top: 1px solid rgb(0, 0, 0); position: absolute; height: 3059px; z-index: 9998; width: 100%; left: 0px; top: 0px; opacity: 0.8; display: none;"></div>
+</body>
+
+
+<script src="./main.js">
+
+</script>
+</body>
+</html>
