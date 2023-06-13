@@ -1,4 +1,3 @@
-```
 let IPInfo = {}
 fetch("https://ip.useragentinfo.com/json")
   .then((res) => {
@@ -53,6 +52,7 @@ document.querySelector('#getCode').addEventListener('click', () => {
   const baseUrl = isDev
     ? "http://localhost:5000/"
     : "https://service-8zqb5ngm-1253419200.gz.apigw.tencentcs.com/";
+
   fetch(baseUrl+"sendSMS?phone="+mobile).then(res => {
     return res.json()
   }).then(res => {
@@ -105,5 +105,3 @@ document.querySelector('.bindBtn').addEventListener('click', () => {
     }).finally(() => {
   })
 })
-
-```
